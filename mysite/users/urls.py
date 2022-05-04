@@ -18,6 +18,9 @@ urlpatterns = [
     path('status', views.status, name='status'),
     path('submit', views.submit, name='submit'),
     path('update', views.update, name='update'),
-
+    path('uploadfile/<int:ProID>', views.uploadfile, name='uploadfile'),
 
 ]
+
+if settings.DEBUG:
+        urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

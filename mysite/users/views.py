@@ -84,6 +84,14 @@ def commented(request, ProID):
     return render(request, "users/projectcommented.html",{
         "project": ProjectAfter.objects.filter(ProID=projectid)
     })
+def uploadfile(request, ProID):
+    projectid = ProID
+    project = ProjectAfter.objects.get(ProID = projectid)
+    if request.method == "POST":
+        project.docfile = request.FILES['docfile']
+    project.save()
+    return redirect("/")
+
 
 def status(request):
     user = User.objects.get(username = request.user.username)

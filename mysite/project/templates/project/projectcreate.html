@@ -17,7 +17,7 @@
         </style>
     </head>
     <body>
-        <form action="{% url 'project:create_project' %}" method="post" novalidate>
+        <form action="{% url 'project:create_project' %}" method="POST" novalidate>
             {% csrf_token %}
             <p>Project Name :</p>
             <input type="text" name="projectname" autocomplete="projectname" id="projectname">
@@ -27,6 +27,7 @@
             <br>
             <p>Article :</p>
             <input type="text" name="article" autocomplete="article" id="article">
+
             &nbsp;&nbsp;
             <button type="submit" class="button"  style="width: 80px;background-color: #4cca4c;">Save &#128190;</button>
             <br>

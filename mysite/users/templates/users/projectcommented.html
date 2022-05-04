@@ -6,7 +6,14 @@
     <h1> Project Approval </h1>
     <h2>Welcome, Name </h2>
     {% for project in project %}
+
                     <p><a href="{% url 'users:checkcomment' project.ProID %}"class= "btn btn-outline-danger">Complete(***WIP***)</a></p>
+
+                    <form method="POST" action="{% url 'users:uploadfile' project.ProID %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <label>Food Image</label>
+                        <input type="file" name="docfile" required="required"><br />
+                        <input type="submit" value="submit" class="apply-button"/>
 
                     <p>{{ project.projectname }}</p>
                     <p>{{ project.projectmanager }}</p>

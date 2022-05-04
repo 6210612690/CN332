@@ -1,11 +1,11 @@
 {% extends "users/layout.html" %}
 <html>
     <style>
-       
+
         hr.new2 {
             border-top: 1px dashed red;
-        }  
-            
+        }
+
     </style>
 <title>Project</title>
 {% block body %}
@@ -22,19 +22,20 @@
                     <p>Project Manager :{{ project.projectmanager }}</p>
                     <p>Project Manager :{{ project.article }}</p>
                     <p>Status : {{ project.status }}</p>
+
                     <p><a name="projectid" href="{% url 'users:commented' project.ProID %}"class= "button">Check</a></p>
                     <br>
                 </div>
             </div>
         </article>
-                    
+
         {% endfor %}
 
         <a href="{% url 'users:index' %}" class="button">กลับสู่หน้าหลัก</a>
         <br>
         <br>
         <hr class="new2">
-        
+
     </div>
 </body>
 {% endblock %}

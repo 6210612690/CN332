@@ -10,6 +10,7 @@ class ProjectBefore (models.Model):
     projectmanager= models.CharField(max_length=150)
     article = models.CharField(max_length=1500)
     PreStudentID = models.ManyToManyField(User, blank=True, related_name="PreStudentID")
+    docfile = models.FileField(upload_to='documents/%Y/%m/%d')
 
 
 class ProjectAfter (models.Model):
@@ -26,6 +27,7 @@ class ProjectAfter (models.Model):
     article = models.CharField(max_length=1500)
     StudentID = models.ManyToManyField(User, blank=True, related_name="StudentID")
     TeacherID = models.ManyToManyField(User, blank=True, related_name="TeacherID")
+    docfile = models.FileField(upload_to='documents/%Y/%m/%d')
 
 class Comment (models.Model):
 

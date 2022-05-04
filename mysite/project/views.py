@@ -20,9 +20,12 @@ class ProjectCreateView(CreateView):
         project = form.save(commit=True)
         project.PreStudentID.add(self.request.user)
         project.save()
+        # if request.method == "POST":
+        #     project.docfile = request.FILES['documents']
+        # project.save()
         messages.success(self.request, 'Project added Success')
         return redirect('/')
-        
+
 
 def PreProjectView(request):
     user = User.objects.get(request.user.username)
