@@ -38,6 +38,8 @@
 
 # Logical Flow
 ![This is an image](https://i.imgur.com/FyUxoRu.png)
+# Demo สาธิตวิธีใช้app
+https://youtu.be/SlM3hoDPJos
 
 #MEMBERS
 1. 6210612609 นภทีป์ ละปะชัย
